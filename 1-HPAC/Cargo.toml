@@ -7,8 +7,8 @@ edition = "2021"
 opt-level = "z"
 lto = true
 panic = "abort"
+codegen-units = 1
+strip = true
 
 [dependencies]
-uefi = "0.24.0"
-uefi-services = "0.21.0"
-
+uefi = { version = "0.24.0", default-features = false }
