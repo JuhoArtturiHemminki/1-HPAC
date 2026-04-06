@@ -91,7 +91,7 @@ pub unsafe extern "efiapi" fn efi_main(
 
     loop {
         let e = entropy();
-        LIMITer.balance(e, &mut MANIFOLD.drift);
+        LIMITER.balance(e, &mut MANIFOLD.drift);
 
         let (r, s) = MANIFOLD.step(e);
 
